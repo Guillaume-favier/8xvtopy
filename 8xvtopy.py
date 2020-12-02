@@ -1,5 +1,5 @@
 import sys
-if sys.argv[1] == '-h':
+if len(sys.argv) != 1 and sys.argv[1] == '-h':
 	print('8xv to py is simple program in python to convert python appvar from ti83 Premium CE python Edition to python files\nUsage : python3 8xvtopy.py <Input file path> <Output file path>')
 	print('or you can convert more than 2 files in one command with :\n python3 pyto8xv.py [file1] [file2] <file3> ...')
 	exit()
@@ -8,8 +8,9 @@ def conv(inp,name='',meth=0):
 	pass
 	i=open(inp,'rb')
 	i2=i.read()
+	i3=i2
 	try:
-		ii=i.read().split(bytes('\x2E\x70\x79\x00','utf-8'))
+		ii=i3.split(bytes('\x2E\x70\x79\x00','utf-8'))
 		iii=ii[1]
 		#print(str(ii[0]))
 		if meth != 2:
@@ -31,7 +32,11 @@ def conv(inp,name='',meth=0):
 			pass
 		else:
 			pcont+=ii[x]
-	cont=str(pcont[:-2].decode('utf-8'))
+	#print(pcont)
+	try:
+		cont=str(pcont[:-2].decode('utf-8'))
+	except UnicodeDecodeError:
+		print('File corupt. Please remove weird caracters at the end of the file but let the 2 first')
 	#print(cont)
 	name=str(name)
 

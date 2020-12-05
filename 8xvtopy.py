@@ -1,7 +1,6 @@
 import sys
 if len(sys.argv) != 1 and sys.argv[1] == '-h':
-	print('8xv to py is simple program in python to convert python appvar from ti83 Premium CE python Edition to python files\nUsage : python3 8xvtopy.py <Input file path> <Output file path>')
-	print('or you can convert more than 2 files in one command with :\n python3 pyto8xv.py [file1] [file2] <file3> ...')
+	print('8xv to py is simple program in python to convert python appvar from ti83 Premium CE python Edition to python files\nUsage : python3 pyto8xv.py <file1> <file2> <file3> ...')
 	exit()
 
 def conv(inp,name='',meth=0):
@@ -52,14 +51,9 @@ def conv(inp,name='',meth=0):
 if len(sys.argv) <=1:
 	inp=input("Quel est le chemain vers votre fichier .8xv ? \n> ")
 	conv(inp)
-elif len(sys.argv) == 2:
+elif len(sys.argv) >= 2:
 	inp=str(sys.argv[1])
 	conv(inp)
-	pass
-elif len(sys.argv) == 3:
-	inp=str(sys.argv[1])
-	name=str(sys.argv[2])
-	conv(inp,name,2)
 	pass
 else:
 	for x in range(len(sys.argv)-1):

@@ -5,16 +5,10 @@ That can be useful for user of TILP because TILP cannot convert 8xv files to pyt
 
 ## Usage
 
-If you want convert one file you can do :
+If you want convert files you can do :
 
 ```bash
-python3 8xvtopy.py <Input file path> <Output file path>
-```
-
-Or you can convert more than 2 files in one command with :
-
-```bash
-python3 pyto8xv.py [file1] [file2] <file3> ...
+python3 8xvtopy.py <file1> <file2> <file3> ...
 ```
 
 If you need help do:

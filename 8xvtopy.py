@@ -51,7 +51,7 @@ def conv(inp,name='',meth=0):
 if len(sys.argv) <=1:
 	inp=input("Quel est le chemain vers votre fichier .8xv ? \n> ")
 	conv(inp)
-elif len(sys.argv) >= 2:
+elif len(sys.argv) == 2:
 	inp=str(sys.argv[1])
 	conv(inp)
 	pass

@@ -8,13 +8,16 @@ That can be useful for user of TILP because TILP cannot convert 8xv files to pyt
 If you want convert files you can do :
 
 ```bash
-python3 8xvtopy.py <file1> <file2> <file3> ...
+python3 8xvtopy.py <file1> <file2> <file3> ... 
 ```
+
+You can add `-v` to activate the verbose mod
 
 If you need help do:
 ```bash
 python3 8xvtopy.py -h
 ```
+
 
 ## Installation
 
